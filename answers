@@ -1,4 +1,11 @@
 • What is a gitignore ﬁle and what should it include for a Java project? 
+Answer: .gitignore tells git which files (or patterns) it should ignore. It's usually used to avoid committing transient files from your working directory that aren't useful to other collaborators, such as compilation products, temporary files IDEs create, etc. For java project we want to avoid committing and tracking changed in .project file. Its specific to user's local environment and contains local path specific to user's machine. Hence it is not required to version control such files and should be added in .gitignore
+
 • What does fast-forward in Git mean? 
+Answer: Fast-Forward in git means that a pull/rebase was able to update directly to the new revision without having to perform any merges. For instance, if you create a new branch from master named "mydev" and you make several commits, as long as nobody else committed to master while you were working you could do a "fast-forward merge" which basically means that git simply moves the HEAD pointer for that branch to the latest commit without doing any hard work.
+
 • Why should you have diﬀerent branches? 
+Answer: Using branches help you organize the workflow more efficiently and rather effortlessly. In every project, there are always multiple different contexts where work happens. Each feature, bugfix, experiment, or alternative of your product is actually a context of its own: it can be seen as its own "topic", clearly separated from other topics. Using different branches makes it simple to work on project in distributed way.
+
 • In a project how many remote Git repositories do you usually have? 
+Answer: In project you can have as many remote repositories as you want. It depends on how many components are part of your project and how you want to perform source code managemnt on all components. If you want to manage source code of each component seperately you can create multiple remote repositories and can work on all at at the same time by clonning them in your local system.
